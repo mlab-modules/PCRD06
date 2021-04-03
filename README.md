@@ -17,7 +17,7 @@
 
 <!--- ELead ---> 
 
-![PCRD06A](doc/img/PCRD06A_QRcode.png) 
+![PCRD06A](doc/img/PCRD06A_big_top.jpg) 
 
 
 <!--- Description --->
