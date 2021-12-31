@@ -10,7 +10,8 @@
 <!--- Name:PCRD06A: --->
 # PCRD06A Sample and hold circuit with analog memory
 <!--- LongName --->
-The PCRD06A module is normally used in combination with SiPM based scintillation detector.
+Signal follower with analog memory. It is a circuit equivalent to a sample-hold circuit triggered by a falling edge of signal or a circuit equivalent to a peak detector. The PCRD06A module is normally used in combination with SiPM based scintillation detector.
+
 <!--- ELongName --->
 
 <!--- Lead --->
@@ -23,13 +24,13 @@ The PCRD06A module is normally used in combination with SiPM based scintillation
 
 <!--- Description --->
 
-Signal output from scintillation detector are pulses. The pulses are stored in a specially developed sample-hold circuit that behaves as a signal follower and analog memory. When signal #PeakDetect_Trace is in H an analog switch U5 turns on and a signal at an output U2B follows a signal at input (2) with slight delay which is done by R13 and C19. If signal #PeakDetect_Trace is switched to a high impedance state the analog switch U5 starts to be controlled by a comparator U4. In this case, when the input signal (2) goes from high to low, a positive input of comparator will be at a higher voltage than negative input, following a voltage at capacitor C19.
+Signal output from scintillation detector are pulses. The pulses are stored in a specially developed sample-hold circuit that behaves as a signal follower and analog memory. When signal #PeakDetect_Trace is in H an analog switch U5 turns on and a signal at an output U2 follows a signal at input with slight delay which is done by R13 and C19. If signal #PeakDetect_Trace is switched to a high impedance state the analog switch U5 starts to be controlled by a comparator U1. In this case, when the input signal goes from high to low, a positive input of comparator will be at a higher voltage than negative input, following a voltage at capacitor C19.
 
 ![PCRD06A](doc/img/PCRD06A_schematics.png)
 
-It causes switching-off of the analog switch U5 and the capacitor C19 holds its last voltage value. This behavior is similar to a peak detector circuit. Next the stored voltage can be converted by ADC (Analogue to Digital Converter) and after this conversion the input #PeakDetect_Trace goes again to H and circuit changes behavior to signal follower circuit. The described sample-hold circuit does not suffer with typical peak detector circuits ills like insensitivity to small signals, mistreatment of negative signals or discharging the capacitor by leakage current through diodes.
+It causes switching-off of the analog switch U5 and the capacitor C19 holds its last voltage value. This behavior is similar to a peak detector circuit. In the next step the stored voltage can be converted by ADC connected at the output and after this conversion the input #PeakDetect_Trace goes again to H and circuit changes behavior to signal follower circuit. The described sample-hold circuit does not suffer with typical peak detector circuits ills like insensitivity to small signals, mistreatment of negative signals or discharging the capacitor by leakage current through diodes.
 
-Moreover, this circuit can be used as a pulse discriminator as well. The signal #PeakDetect_Trace can be connected to an input of digital circuits when it is controlled by the comparator U4. When the input signal goes from high to low, the signal #PeakDetect_Trace goes from high to low as well. This behavior can be used for detection of falling edge of signal. There is only one constraint of this circuit, the input signal can not change raising/falling time widely and RC time constant (R13, C19) must be chosen correctly, respecting the input signal time properties.
+Moreover, this circuit can be used as a pulse discriminator as well. The signal #PeakDetect_Trace can be connected to an input of digital circuits when it is controlled by the comparator U1. When the input signal goes from high to low, the signal #PeakDetect_Trace goes from high to low as well. This behavior can be used for detection of falling edge of signal. There is only one constraint of this circuit, the input signal can not change raising/falling time widely and RC time constant (R13, C19) must be chosen correctly, respecting the input signal time properties.
 
 <!--- EDescription --->
 <!--- Content --->
