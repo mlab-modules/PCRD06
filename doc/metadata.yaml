@@ -15,6 +15,7 @@ images:
 - doc/img/PCRD06A_PC_big_bot.png
 - doc/gen/PCRD06A-schematic.svg
 mark: 50
+mod_ibom: hw/cam_profi/ibom/PCRD06A-ibom.html
 mod_scheme: doc/gen/PCRD06A-schematic.pdf
 tags:
 - photomultiplier
