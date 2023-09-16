@@ -17,7 +17,7 @@ images:
 mark: 50
 mod_ibom: hw/cam_profi/ibom/PCRD06A-ibom.html
 mod_scheme: doc/gen/PCRD06A-schematic.pdf
-status: 0
+status: 2
 tags:
 - photomultiplier
 - sipm
