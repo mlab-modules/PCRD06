@@ -3,6 +3,7 @@ github_branch: PCRD06A
 github_repo: PCRD06
 github_url: https://github.com/mlab-modules/PCRD06
 homepage: false
+image_title: doc/gen/img/PCRD06A-top.png
 images:
 - doc/img/PCRD06A_big_top.jpg
 - doc/img/PCRD06A_big_bot.jpg
