@@ -3,7 +3,6 @@ github_branch: PCRD06A
 github_repo: PCRD06
 github_url: https://github.com/mlab-modules/PCRD06
 homepage: false
-replaced: PCRD07
 image_title: doc/gen/img/PCRD06A-top.png
 images:
 - doc/img/PCRD06A_big_top.jpg
@@ -19,6 +18,7 @@ images:
 mark: 50
 mod_ibom: hw/cam_profi/ibom/PCRD06A-ibom.html
 mod_scheme: doc/gen/PCRD06A-schematic.pdf
+replaced: PCRD07
 status: 2
 tags:
 - photomultiplier
